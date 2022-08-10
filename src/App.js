@@ -1,5 +1,13 @@
+import Navbar from './component/Navbar';
+import HomePage from './pages/HomePage';
+
 function App() {
-  return <div className='text-xl'>Hello World</div>;
+  return (
+    <>
+      <Navbar />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;
