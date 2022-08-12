@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Hero from '../component/Hero';
 import MovieList from '../component/MovieList';
 import Pagination from '../component/Pagination';
 
@@ -33,10 +34,8 @@ function HomePage() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className='w-full mx-auto p-4 py-24'>
-      <h1 className=' flex text-2xl md:text-6xl tracking-wider justify-center'>
-        Home of the top rated movies
-      </h1>
+    <div className='w-full mx-auto'>
+      <Hero />
       <MovieList movies={currentMovies} />
       <Pagination
         moviesPerPage={moviesPerPage}
