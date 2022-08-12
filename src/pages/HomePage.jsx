@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import MovieList from '../component/MovieList';
+import Pagination from '../component/Pagination';
 
 function HomePage() {
   const [movies, setMovies] = useState([]);
   const [isError, setIsError] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [moviesPerPage] = useState(20);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,9 +25,24 @@ function HomePage() {
     };
     fetchData();
   }, []);
+
+  const indexOfLastMovie = currentPage * moviesPerPage;
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className='w-full mx-auto p-4 py-24'>
-      <MovieList movies={movies} />
+      <h1 className=' flex text-2xl md:text-6xl tracking-wider justify-center'>
+        Home of the top rated movies
+      </h1>
+      <MovieList movies={currentMovies} />
+      <Pagination
+        moviesPerPage={moviesPerPage}
+        totalMovies={movies.length}
+        paginate={paginate}
+      />
     </div>
   );
 }
