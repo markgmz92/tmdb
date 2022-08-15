@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 
-function Hero() {
+function Hero({ movies }) {
   return (
     <div className=' mx-auto'>
       <div className='max-h-[500px] relative'>
@@ -10,7 +10,7 @@ function Hero() {
             Home of Top Movies
           </h1>
           <div className='flex justify-center mt-8'>
-            <SearchBar />
+            <SearchBar movies={movies} />
           </div>
         </div>
         <img
