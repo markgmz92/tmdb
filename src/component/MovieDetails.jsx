@@ -45,6 +45,9 @@ function MovieDetails({ movie }) {
             Original Title:{' '}
             <span className='font-normal '>{movie.original_title}</span>
           </h2>
+          <h2 className='my-4 md:my-6 text-xl font-bold px-8 md:px-0'>
+            Title: <span className='font-normal '>{movie.title}</span>
+          </h2>
           <h3 className='my-4 md:my-6 text-xl font-bold px-8 md:px-0'>
             Release Date:{' '}
             <span className='font-normal'>{movie.release_date}</span>
@@ -63,7 +66,7 @@ function MovieDetails({ movie }) {
             </p>
           </h3>
 
-          <div className='flex justify-center mb-4 md:mb-0'>
+          <div className='flex justify-center md:justify-start mb-4 md:mb-0'>
             <Link to={'/'}>
               <button className='bg-black text-white px-6 py-2 rounded-lg hover:scale-105'>
                 Home Page
