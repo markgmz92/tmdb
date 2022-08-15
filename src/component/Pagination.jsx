@@ -10,9 +10,12 @@ function Pagination({ moviesPerPage, totalMovies, paginate }) {
       {pageNumbers.map((number) => (
         <li
           key={number}
-          className='px-2 text-2xl hover:bg-black hover:text-white'
+          className='px-2 mb-4 text-2xl hover:bg-black hover:text-white'
         >
-          <button onClick={() => paginate(number)} className=''>
+          <button
+            onClick={() => paginate(number)}
+            className='flex justify-center'
+          >
             {number}
           </button>
         </li>
