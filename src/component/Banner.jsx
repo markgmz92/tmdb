@@ -6,7 +6,7 @@ function Banner({ movie }) {
       <div className='max-h-[500px] relative'>
         <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/60 flex flex-col justify-center'>
           <div className='flex justify-center'>
-            <h1 className='text-4xl md:text-6xl'>{movie.title}.</h1>
+            <h1 className='text-2xl md:text-6xl'>{movie.title}.</h1>
           </div>
         </div>
         <img
