@@ -1,6 +1,3 @@
-import React from 'react';
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
-
 function Footer() {
   return (
     <div className='w-full my-auto py-16 px-24 md:px-56 grid lg:grid-cols-1  text-gray-300 bg-[#032541] '>

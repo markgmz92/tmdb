@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Banner({ movie }) {
   return (
     <div className=' mx-auto'>

@@ -1,4 +1,3 @@
-import Spinner from './Spinner';
 import { Link } from 'react-router-dom';
 
 const API_IMG = 'https://image.tmdb.org/t/p/w342';

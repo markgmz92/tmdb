@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from '../component/Hero';
 import Spinner from '../component/Spinner';
 import MovieList from '../component/MovieList';
@@ -18,7 +18,9 @@ function HomePage() {
     const fetchMovies = async () => {
       setLoading(true);
       const res = await axios.get('http://localhost:3000/movies');
+
       setMovies(res.data);
+
       setLoading(false);
     };
     fetchMovies();

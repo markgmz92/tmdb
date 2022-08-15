@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import SearchBar from './SearchBar';
+import { useState } from 'react';
+
 import TMDB from '../component/assets/TMDB.jpg';
 import {
   AiOutlineClose,
