@@ -17,7 +17,7 @@ function HomePage() {
 
     const fetchMovies = async () => {
       setLoading(true);
-      const res = await axios.get('http://localhost:3000/movies');
+      const res = await axios.get('http://localhost:8000/movies');
 
       setMovies(res.data);
 
@@ -39,6 +39,7 @@ function HomePage() {
       ) : (
         <div className='w-full mx-auto'>
           <Hero movies={movies} />
+
           <MovieList movies={currentMovies} />
           <Pagination
             moviesPerPage={moviesPerPage}

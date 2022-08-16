@@ -13,7 +13,7 @@ function MovieScreen() {
   useEffect(() => {
     const fetchMovie = async () => {
       setLoading(true);
-      const res = await axios.get('http://localhost:3000/movies/' + id);
+      const res = await axios.get('http://localhost:8000/movies/' + id);
       setMovie(res.data);
       setLoading(false);
     };

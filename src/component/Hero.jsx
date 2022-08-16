@@ -1,6 +1,4 @@
-import SearchBar from './SearchBar';
-
-function Hero({ movies }) {
+function Hero() {
   return (
     <div className=' mx-auto'>
       <div className='max-h-[500px] relative'>
@@ -8,9 +6,6 @@ function Hero({ movies }) {
           <h1 className='flex justify-center px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
             Home of Top Movies
           </h1>
-          <div className='flex justify-center mt-8'>
-            <SearchBar movies={movies} />
-          </div>
         </div>
         <img
           className='w-full max-h-[500px] object-cover'

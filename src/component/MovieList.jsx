@@ -5,6 +5,10 @@ const API_IMG = 'https://image.tmdb.org/t/p/w342';
 function MovieList({ movies }) {
   return (
     <div className='max-w-[1240px] m-auto px-4 py-12'>
+      <div className='flex justify-center'>
+        <h2 className='md:text-4xl md:mb-4'>Top Rated Movies</h2>
+      </div>
+
       <div className='grid grid-cols-2 md:grid-cols-4 gap-8 py-6 w-full'>
         {movies.map((movie, index) => (
           <div
