@@ -17,7 +17,7 @@ function HomePage() {
 
     const fetchMovies = async () => {
       setLoading(true);
-      const res = await axios.get('http://localhost:8000/movies');
+      const res = await axios.get('https://tmdbtestproject.herokuapp.com/movies');
 
       setMovies(res.data);
 

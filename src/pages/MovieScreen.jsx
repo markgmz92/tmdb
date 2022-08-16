@@ -13,7 +13,9 @@ function MovieScreen() {
   useEffect(() => {
     const fetchMovie = async () => {
       setLoading(true);
-      const res = await axios.get('http://localhost:8000/movies/' + id);
+      const res = await axios.get(
+        'https://tmdbtestproject.herokuapp.com/movies/' + id
+      );
       setMovie(res.data);
       setLoading(false);
     };
